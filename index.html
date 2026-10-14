@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple personal budget and expense tracker.">
-    <title>My Budget Tracker</title>
+    <meta name="description" content="SpendWise is a simple personal budget and expense tracker.">
+    <title>SpendWise | Budget Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header id="page-header">
         <div class="container">
             <p class="eyebrow">PERSONAL FINANCE</p>
-            <h1>My Budget Tracker</h1>
-            <p class="subtitle">Track your income and expenses in one place.</p>
+            <h1>SpendWise</h1>
+            <p class="subtitle">Track your budget and spending in one place.</p>
         </div>
     </header>
 
     <main class="container">
         <section id="add-expense" class="panel" aria-labelledby="add-expense-heading">
             <h2 id="add-expense-heading">Add Expense</h2>
-            <p class="section-description">Record a purchase to keep your budget organized.</p>
+            <p class="section-description">This week's JavaScript foundation uses prompts to collect sample budget data and logs the calculations in your browser console.</p>
 
             <form>
                 <div class="form-field">
                     <label for="expense-name">Expense name</label>
                     <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries">
                 </div>
-
                 <div class="form-field">
                     <label for="expense-amount">Amount (KSh)</label>
                     <input type="number" id="expense-amount" name="expense-amount" min="0" step="0.01" placeholder="e.g. 1500">
                 </div>
-
                 <div class="form-field">
                     <label for="expense-category">Category</label>
                     <select id="expense-category" name="expense-category">
@@ -44,9 +43,8 @@
                         <option value="other">Other</option>
                     </select>
                 </div>
-
                 <button type="button" class="submit-button">Add Expense</button>
-                <p class="form-note">This is a visual demo. Expense saving will be added in a later week.</p>
+                <p class="form-note">Open the browser developer console (F12) to view budget results.</p>
             </form>
         </section>
 
@@ -54,21 +52,20 @@
             <div class="section-heading">
                 <div>
                     <h2 id="expenses-heading">Your Expenses</h2>
-                    <p class="section-description">Your recorded spending will appear here.</p>
+                    <p class="section-description">The page layout is ready for future expense-tracking features.</p>
                 </div>
-                <span class="count-badge">0 items</span>
+                <span class="count-badge">JavaScript foundation</span>
             </div>
-
             <div class="empty-state">
                 <div class="empty-icon" aria-hidden="true">$</div>
-                <h3>No expenses yet</h3>
-                <p>Your expense list will show up here once tracking is implemented.</p>
+                <h3>Welcome to SpendWise</h3>
+                <p>When the page loads, answer the prompts to calculate your remaining budget. Results appear in the browser console.</p>
             </div>
         </section>
     </main>
 
     <footer class="page-footer">
-        <p>My Budget Tracker <span aria-hidden="true">&middot;</span> Week 1 project</p>
+        <p>SpendWise <span aria-hidden="true">&middot;</span> Week 6 JavaScript foundation</p>
     </footer>
 </body>
 </html>
