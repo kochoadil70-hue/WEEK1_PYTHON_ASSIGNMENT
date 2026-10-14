@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple personal budget and expense tracker.">
-  <title>My Budget Tracker</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple personal budget and expense tracker.">
+    <title>My Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header id="page-header">
-    <div class="container">
-      <p class="eyebrow">PERSONAL FINANCE</p>
-      <h1>My Budget Tracker</h1>
-      <p class="subtitle">Track your income and expenses in one place.</p>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="panel expense-form-section" aria-labelledby="add-expense-heading">
-      <div class="section-heading">
-        <span class="section-number">01</span>
-        <div>
-          <h2 id="add-expense-heading">Add Expense</h2>
-          <p>Keep a note of where your money goes.</p>
+    <header id="page-header">
+        <div class="container">
+            <p class="eyebrow">PERSONAL FINANCE</p>
+            <h1>My Budget Tracker</h1>
+            <p class="subtitle">Track your income and expenses in one place.</p>
         </div>
-      </div>
+    </header>
 
-      <form class="expense-form">
-        <div class="form-field">
-          <label for="expense-name">Expense name</label>
-          <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries">
-        </div>
+    <main class="container">
+        <section id="add-expense" class="panel" aria-labelledby="add-expense-heading">
+            <h2 id="add-expense-heading">Add Expense</h2>
+            <p class="section-description">Record a purchase to keep your budget organized.</p>
 
-        <div class="form-field">
-          <label for="expense-amount">Amount (KSh)</label>
-          <input type="number" id="expense-amount" name="expense-amount" min="0" step="0.01" placeholder="e.g. 1500">
-        </div>
+            <form>
+                <div class="form-field">
+                    <label for="expense-name">Expense name</label>
+                    <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Groceries">
+                </div>
 
-        <div class="form-field">
-          <label for="expense-category">Category</label>
-          <select id="expense-category" name="expense-category">
-            <option value="">Choose a category</option>
-            <option value="food">Food &amp; groceries</option>
-            <option value="transport">Transport</option>
-            <option value="bills">Bills &amp; utilities</option>
-            <option value="shopping">Shopping</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
+                <div class="form-field">
+                    <label for="expense-amount">Amount (KSh)</label>
+                    <input type="number" id="expense-amount" name="expense-amount" min="0" step="0.01" placeholder="e.g. 1500">
+                </div>
 
-        <button type="button" class="add-button">Add Expense</button>
-        <p class="form-note">This is a static demo. Adding expenses is not enabled yet.</p>
-      </form>
-    </section>
+                <div class="form-field">
+                    <label for="expense-category">Category</label>
+                    <select id="expense-category" name="expense-category">
+                        <option value="">Choose a category</option>
+                        <option value="food">Food &amp; groceries</option>
+                        <option value="transport">Transport</option>
+                        <option value="bills">Bills &amp; utilities</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-    <section id="expenses-panel" class="panel" aria-labelledby="expenses-heading">
-      <div class="section-heading">
-        <span class="section-number">02</span>
-        <div>
-          <h2 id="expenses-heading">Your Expenses</h2>
-          <p>Your recorded expenses will appear here.</p>
-        </div>
-      </div>
+                <button type="button" class="submit-button">Add Expense</button>
+                <p class="form-note">This is a visual demo. Expense saving will be added in a later week.</p>
+            </form>
+        </section>
 
-      <div class="empty-state">
-        <div class="empty-icon" aria-hidden="true">$</div>
-        <h3>No expenses yet</h3>
-        <p>Your expense list will show up here once you start tracking.</p>
-      </div>
-    </section>
-  </main>
+        <section id="expenses" class="panel expenses-panel" aria-labelledby="expenses-heading">
+            <div class="section-heading">
+                <div>
+                    <h2 id="expenses-heading">Your Expenses</h2>
+                    <p class="section-description">Your recorded spending will appear here.</p>
+                </div>
+                <span class="count-badge">0 items</span>
+            </div>
 
-  <footer class="container page-footer">
-    <p>Built as a Week 1 HTML &amp; CSS project.</p>
-  </footer>
+            <div class="empty-state">
+                <div class="empty-icon" aria-hidden="true">$</div>
+                <h3>No expenses yet</h3>
+                <p>Your expense list will show up here once tracking is implemented.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>My Budget Tracker <span aria-hidden="true">&middot;</span> Week 1 project</p>
+    </footer>
 </body>
 </html>
